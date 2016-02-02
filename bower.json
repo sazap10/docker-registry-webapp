@@ -1,0 +1,22 @@
+{
+  "name": "docker-registry-webapp",
+  "description": "A frontend for a private docker registry(v2).",
+  "main": "server.js",
+  "authors": [
+    "Sachin Pande"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "docker",
+    "registry"
+  ],
+  "homepage": "https://github.com/sazap10/docker-registry-webapp",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

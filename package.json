@@ -1,0 +1,20 @@
+{
+  "name": "docker-registry-webapp",
+  "version": "1.0.0",
+  "description": "A frontend for a private docker registry(v2).",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sazap10/docker-registry-webapp.git"
+  },
+  "keywords": [
+    "docker",
+    "registry"
+  ],
+  "author": "Sachin Pande",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sazap10/docker-registry-webapp/issues"
+  },
+  "homepage": "https://github.com/sazap10/docker-registry-webapp#readme"
+}
