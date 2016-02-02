@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/sazap10/docker-registry-webapp/issues"
   },
-  "homepage": "https://github.com/sazap10/docker-registry-webapp#readme"
+  "homepage": "https://github.com/sazap10/docker-registry-webapp#readme",
+  "dependencies": {
+    "envalid": "^0.2.0",
+    "express": "^4.13.4"
+  }
 }
