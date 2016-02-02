@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sazap10/docker-registry-webapp#readme",
   "dependencies": {
+    "bower": "^1.7.7",
     "envalid": "^0.2.0",
     "express": "^4.13.4"
   }
