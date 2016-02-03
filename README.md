@@ -8,6 +8,7 @@ A frontend for a private docker registry(v2).
 
 ## Technologies
 * Express
+* Angular
 
 ## Usage
 ### Docker
