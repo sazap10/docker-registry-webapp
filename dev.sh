@@ -1,3 +1,6 @@
 export PORT=3000
 
-node server.js
+export DOCKER_REGISTRY_HOST=[registry hostname with proto]
+export DOCKER_REGISTRY_PORT=[registry port]
+
+nodemon server.js

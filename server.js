@@ -7,7 +7,9 @@ const env = require('envalid'),
     app = express();
 
 env.validate(process.env, {
-    PORT: {required: false, parse: env.toNumber}
+    PORT: {required: false, parse: env.toNumber},
+    DOCKER_REGISTRY_HOST: {required: true},
+    DOCKER_REGISTRY_PORT: {required: true}
 });
 
 const port = process.env.PORT || 3000;
@@ -25,6 +27,8 @@ app.use((error, req, res, next) => {
         next();
     }
 });
+
+app.use('/api', require('./api'));
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
