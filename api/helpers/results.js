@@ -12,11 +12,11 @@ module.exports.sendPositive = res => {
 
 module.exports.error = res => {
     return error => {
-        if (error && !error.code) {
+        if (error && !error.statusCode) {
             console.log(error);
             res.status(500).end();
             return;
         }
-        res.status(error.code).json(error);
+        res.sendStatus(error.statusCode);
     };
 };

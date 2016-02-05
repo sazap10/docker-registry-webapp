@@ -7,4 +7,6 @@ var router = express.Router();
 
 router.get('/repository', repositoryController.index);
 
+router.get('/repository/:name', repositoryController.getTags);
+
 module.exports = router;

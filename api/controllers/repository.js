@@ -8,3 +8,10 @@ module.exports.index = function (req, res) {
         .then(resultsHandler.sendPositive(res))
         .catch(resultsHandler.error(res));
 };
+
+module.exports.getTags = function (req, res) {
+    const name = req.params.name;
+    repositoryService.getTagList(name)
+        .then(resultsHandler.sendPositive(res))
+        .catch(resultsHandler.error(res));
+};

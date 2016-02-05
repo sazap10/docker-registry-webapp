@@ -13,3 +13,12 @@ exports.getList = () => {
     return request(requestOptions)
         .then(data => data.repositories);
 };
+
+exports.getTagList = (name) => {
+    var requestOptions = {
+        url: `${dockerHost}:${dockerPort}/v2/${name}/tags/list`,
+        json: true
+    };
+    return request(requestOptions)
+        .then(data => data.tags);
+};
