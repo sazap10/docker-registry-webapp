@@ -5,6 +5,6 @@ const express = require('express'),
 
 var router = express.Router();
 
-router.get('/repositories', repositoryController.index);
+router.get('/repository', repositoryController.index);
 
 module.exports = router;
