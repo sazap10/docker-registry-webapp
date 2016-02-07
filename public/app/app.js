@@ -21,16 +21,21 @@ define(['knockout', 'jquery', 'sammy'], function (ko, $, Sammy) {
             var name = this.params.splat[0];
             vm.currentView('TagList');
             vm.currentRepo(name);
-            $.getJSON('/api/repository/' + name, data => {
-                vm.tags(data);
-            });
+            $.getJSON('/api/repository/' + name)
+                .done(data => {
+                    vm.tags(data);
+                })
+                .fail((jqxhr, textStatus, error) => {
+                    location.hash = '';
+                });
         });
 
         this.get('', function () {
             vm.currentView('Home');
-            $.getJSON('/api/repository', data => {
-                vm.containers(data);
-            });
+            $.getJSON('/api/repository')
+                .done(data => {
+                    vm.containers(data);
+                });
         });
     }).run('');
 });
