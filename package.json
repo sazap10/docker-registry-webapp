@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A frontend for a private docker registry(v2).",
   "main": "server.js",
-  "scripts": {
-    "postinstall": "bower install --allow-root"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sazap10/docker-registry-webapp.git"
