@@ -18,5 +18,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "knockout": "^3.4.0",
+    "jquery": "^2.2.0",
+    "requirejs": "^2.1.22",
+    "pure": "^0.6.0",
+    "sammy": "^0.7.6"
+  }
 }

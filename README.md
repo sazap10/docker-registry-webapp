@@ -8,12 +8,17 @@ A frontend for a private docker registry(v2).
 
 ## Technologies
 * Express
+* Knockout
 
 ## Usage
 ### Docker
 #### Docker run
 ```
-docker run --name docker-registry-webapp -p 80:3000 -d -e PORT=3000 sazap10/docker-registry-webapp:[version]
+docker run --name docker-registry-webapp -d \
+    -p 80:3000 \
+    -e DOCKER_REGISTRY_HOST=[registry hostname with proto] \
+    -e DOCKER_REGISTRY_PORT=[registry port] \
+    sazap10/docker-registry-webapp:[version]
 ```
 
 #### docker-compose
@@ -25,5 +30,6 @@ docker-registry-webapp:
   ports:
    - "80:3000"
   environment:
-    PORT: 3000
+    DOCKER_REGISTRY_HOST: [registry hostname with proto]
+    DOCKER_REGISTRY_PORT: [registry port]
 ```
