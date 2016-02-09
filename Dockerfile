@@ -3,8 +3,6 @@ FROM mhart/alpine-node:5.5.0
 WORKDIR /src
 ADD . .
 
-#RUN npm install  --unsafe-perm
-
 RUN deps="git" \
  && apk update \
  && apk add $deps \
