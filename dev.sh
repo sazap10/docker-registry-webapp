@@ -1,6 +1,6 @@
-export PORT=3000
+export PORT=5001
 
-export DOCKER_REGISTRY_HOST=https://registry:aaC8QIQ9ToRTC6O9bhez0TjAgoc0OONX@registry.azure.sachinpan.de
-export DOCKER_REGISTRY_PORT=443
+export DOCKER_REGISTRY_HOST=[Registry Host]
+export DOCKER_REGISTRY_PORT=[Registry Port]
 
 nodemon server.js
