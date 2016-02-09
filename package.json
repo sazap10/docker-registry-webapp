@@ -4,7 +4,7 @@
   "description": "A frontend for a private docker registry(v2).",
   "main": "server.js",
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install --allow-root"
   },
   "repository": {
     "type": "git",
