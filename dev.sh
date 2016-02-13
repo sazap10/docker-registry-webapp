@@ -1,6 +1,5 @@
-export PORT=5001
+export PORT=3000
 
-export DOCKER_REGISTRY_HOST=[Registry Host]
-export DOCKER_REGISTRY_PORT=[Registry Port]
+source .env
 
 nodemon server.js

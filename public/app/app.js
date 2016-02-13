@@ -1,11 +1,19 @@
 'use strict';
 define(['knockout', 'jquery', 'sammy'], function (ko, $, Sammy) {
+    var colours = ['blue', 'red', 'pink', 'purple', 'deep-purple', 'indigo', 'light-blue', 'cyan', 'teal', 'green',
+        'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
+
     function ViewModel() {
         var self = this;
         self.containers = ko.observableArray();
         self.currentView = ko.observable();
         self.currentRepo = ko.observable();
         self.tags = ko.observableArray();
+
+        self.cardColour = ko.pureComputed(function () {
+            var random = Math.floor((Math.random() * colours.length));
+            return colours[random];
+        }, self);
 
         self.goToTagList = function (name) {
             location.hash = 'repository' + '/' + name;
@@ -25,7 +33,7 @@ define(['knockout', 'jquery', 'sammy'], function (ko, $, Sammy) {
                 .done(data => {
                     vm.tags(data);
                 })
-                .fail((jqxhr, textStatus, error) => {
+                .fail(() => {
                     location.hash = '';
                 });
         });
